@@ -23,7 +23,7 @@ pipeline{
         stage('Deploy'){ 
             steps{
                 echo  'Deploy to container'
-                deploy adapters: [tomcat9(credentialsId: 'Tomcat', path: '', url: 'https://172.31.231.217:8081')], contextPath: '/app', war: '**/*.war'
+                deploy adapters: [tomcat9(credentialsId: 'Tomcat', path: '', url: 'http://172.31.231.217:8081')], contextPath: '/app', war: '**/*.war'
             }
         }
     }
