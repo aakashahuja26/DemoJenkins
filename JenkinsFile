@@ -16,8 +16,10 @@ pipeline{
                 echo  'mvn install'
             }
         }
-        stage('Deploy'){
-            echo ' Deploy to Tomcat'
+        stage('Deploy'){ 
+            steps{
+                echo  'Deploy to container'
+            }
         }
     }
 }
