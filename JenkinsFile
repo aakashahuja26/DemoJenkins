@@ -1,9 +1,13 @@
 pipeline{
     agent any
+    tools {
+        maven 'apache-maven-3.0.1' 
+    }
     stages{
         stage('Clone'){
             steps{
-               sh git clone 'https://github.com/aakashahuja26/SampleJavaApp.git'
+               sh "git clone https://github.com/aakashahuja26/SampleJavaApp.git"
+               sh "mvn -version"
             }
         }
         stage('Test'){
