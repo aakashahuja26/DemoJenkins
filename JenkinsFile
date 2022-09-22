@@ -6,7 +6,6 @@ pipeline{
     stages{
         stage('Clone'){
             steps{
-               sh "git clone https://github.com/aakashahuja26/SampleJavaApp.git"
                sh "mvn -version"
             }
         }
