@@ -1,0 +1,23 @@
+pipeline{
+    agent any
+    stages{
+        stage('Clone'){
+            steps{
+                echo 'git clone' 
+            }
+        }
+        stage('Test'){
+                steps{
+                    echo 'mvn clean'
+                }
+        }
+        stage('Build'){
+            steps{
+                echo  'mvn install'
+            }
+        }
+        stage('Deploy'){
+            echo ' Deploy to Tomcat'
+        }
+    }
+}
